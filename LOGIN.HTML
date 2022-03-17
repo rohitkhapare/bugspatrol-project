@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lan='en' and dir="Itr">
+    <head>
+        <meta charset="utf-8">
+        <title>Interactive Login</title> 
+        <link rel="stylesheet" href="login_style.css">
+        
+      
+    </head>
+    <body>
+        
+        <form class="box" id="Login">
+            <div>
+            <h1>
+                LOGIN
+            </h1> 
+            <input type="text" name="Username" placeholder="Enter Username" id="Username">
+            <input type="password" name="password" placeholder="Enter password" id="password">
+            <input type="submit" value="LOGIN"> 
+            <!-- <button><a href="home.html">LOGIN</a></button>  -->
+            <br> <br>
+            <a href="Register.html" ><span>Create a new Account ?</span> </a>
+            
+
+
+            </div>
+            <script defer>
+                document.getElementById("Login").onsubmit=function handlelogim(e){
+                    const username=document.getElementById("Username").value;
+                    const password=document.getElementById("Username").value;
+                    console.log(username)
+                    console.log(password)
+                }
+            </script>
+        </form>
+    </body>
+</html> 

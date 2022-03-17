@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register page</title>
+        <link rel="stylesheet" href="register style.css">
+        <script>
+            function handleregister(e){
+                e.preventDefault()
+                fetch("127.0.0.1:3001/register",{
+                    method:"post"
+                })
+                .then(function(res){
+                    console.log(res)
+                })
+            }
+        </script>
+    </head>
+
+    <body> 
+        <form class="Register" action="http://localhost:3001/register" method="post">
+            <div>
+                <h1>
+                    Register
+                </h1>
+                <input type="text" name="Username" placeholder="Enter Username" id="Username">
+                <input type="password" name="password" placeholder="Enter password" minlength="8" id="password">
+                <textarea rows="2" cols="10"  name="Address" placeholder="Address" id="Address"></textarea>
+              
+                <input type="email" name="Email" placeholder="Email id" id="Email id">
+            
+                <input type="text" name="phonenumber" placeholder="Phone number" id="Phone number">;
+                <input type="submit"  value="Register" >
+                <a href="LOGIN.HTML" ><span>Already registered? ?</span> </a>
+            </div>
+        </form>
+
+        </form>
+    </body>
+        
+    </body>
+
+</html>

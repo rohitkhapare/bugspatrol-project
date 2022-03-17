@@ -1,0 +1,96 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(pic1.jpg);
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+.Register{
+    width: 700px;
+    height:100%;
+    padding:30px;
+    position: absolute;
+    top:50%;
+    left:81.5%;
+    transform: translate(-50%,-50%);
+    background:black;
+    text-align: center;
+}
+.Register div{
+    margin-top:200px;
+}
+.Register div a{
+    text-decoration: none;
+}
+.Register h1
+{
+    color:whitesmoke;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.Register input[type="text"],.Register input[ type="password"]
+{
+    border: 0;
+    background: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #108baa;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+.Register input[type="text"]:focus,.Register input[ type="password"]:focus,.Register input[type="email"]:focus{
+    width: 350px;
+    border-color: yellow;
+}
+.Register input[type="submit"]{
+    border: 0;
+    background: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #4ae06fbd;
+    padding: 14px 10px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+.Register input[type="submit"]:hover{
+    background: rgba(255, 255, 0, 0.534);
+}
+.Register textarea{
+    border: 0;
+    background: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #108baa;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+.Register input[type="email"],.Register input[ type="tel"]
+{
+    border: 0;
+    background: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #108baa;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25px;
+}

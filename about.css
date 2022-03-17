@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font: 10px;
+}
+
+.main-container {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.main-container h1 {
+  font-size: 3rem;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  color: #3f043f;
+}
+
+.main-container .container-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-container .container-1 p {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  width: 70%;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 10rem;
+  text-align: justify;
+}
+
+.main-container .container-1 img {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  margin-right: 10rem;
+}
+
+.main-container .container-2 .sub-container {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .container-2 .sub-container .sub-one {
+  float: left;
+  font-size: 1.1rem;
+  width: 70%;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 10rem;
+  text-align: justify;
+  color: #3f043f;
+  font-weight: bold;
+}
+
+.main-container .container-2 .sub-container .sub-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.main-container .container-2 .sub-container .sub-two i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #3f043f;
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+
+.main-container .container-2 .sub-container .sub-two i:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #666);
+          filter: drop-shadow(1px 1px 1px #666);
+}
+/*# sourceMappingURL=about.css.map */

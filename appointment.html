@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Appointment page </title>
+        <link rel="stylesheet" href="appointment.css">
+     <!-- <script src="appointment.js"></script>   -->
+     <script>
+      function handleappointment(e){
+          e.preventDefault();
+          console.log('handleappointment called');
+          return;
+          fetch("127.0.0.1:3001/appointment",{
+              method:"post"
+          })
+          .then(function(res){
+              console.log(res);
+          })
+      }
+  </script>
+  </head>
+   <body>
+     <section>
+    <form class="appoint" id="appointment" onsubmit="handleappointment()">
+      <fieldset>
+      <h1>APPOINTMENT SECTION</h1><br>
+       <label>
+        Name : 
+        <input type="text" name="name" required>
+      </label><br>
+      <label>
+        Email : 
+        <input type="email" name="email" required>
+      </label><br>
+      <label>
+        Phone : 
+        <input type="tel" name="phonenumber">
+      </label><br>
+      <label> 
+       Address : 
+       <textarea  rows="3" cols="10"  name="address" placeholder="address" id="address"></textarea>
+      </label><br> 
+      <h3>Book Appointment For : </h3>
+     
+      <table>
+        <tr>
+          <td>Date : </td>
+          <td>Time :</td>
+        </tr>
+        <tr>
+          <td> <input type="date" name="date"  id="date" required></td>
+          <td><input type="time" name="time"  id="time" required></td>
+        </tr>
+      </table>
+      
+      
+      <label for="Pest services">Services : </label>
+      <select name="services" id="Pest services" onclick="price()">
+        <option value="select">Select</option>
+            <option value="Rodent Control">Rodent Control</option>
+            <option value="Cockroach Control">Cockroach Control</option>
+            <option value="Termite Control">Termite Control</option>
+            <option value="Lizard Control">Lizard Control</option>
+            <option value="Mosquito Control">Mosquito Control</option>
+            <option value="Ant Control">Ant Control</option>
+            <option value="Sanitization">Sanitization</option>
+              </select><br>
+      
+    <p id="price"><b>Price : --</b></p>
+
+      <span>Payment method : </span>&nbsp;&nbsp;&nbsp;
+      <input type="radio" id="online Payment" name="payment" value="Online">
+      <label for="Online Payment">Online </label>
+      <input type="radio" id="Cash" name="payment" value="Cash">
+      <label for="Cash">Cash </label><br><br>
+
+      
+      <span>Confirm Request by : </span>
+    
+        <label>
+          <input type="radio" name="confirmation" value="Email" checked>
+          Email
+        </label>
+        <label>
+          <input type="radio" name="confirmation" value="Phone call">
+         Phone call
+        </label>
+        <br><br>
+    
+
+        <!-- <button onclick="submitData()"><a id="submit" href="#">BOOK NOW</a></button> -->
+        <input type="submit" value="Book now" />
+      
+    </fieldset>
+</form>
+</section>
+<script>
+
+document.getElementById("booknow-btn").addEventListener("click", (e)=>{
+  e.preventDefault()
+})
+
+function price(){
+  var service = document.getElementById("Pest services").value;
+  if(service=="select"){
+    document.getElementById("price").innerHTML = "Price : -- ";
+  }
+  else if(service == "Rodent Control"){
+    document.getElementById("price").innerHTML = "Price : 2500Rs ";
+  }
+  else if(service == "Cockroach Control"){
+    document.getElementById("price").innerHTML = "Price : 1500Rs ";
+  }
+  else if(service == "Termite Control"){
+    document.getElementById("price").innerHTML = "Price : 2500Rs ";
+    }
+    else if(service == "Lizard Control"){
+    document.getElementById("price").innerHTML = "Price : 3000Rs ";
+    }
+    else if(service == "Mosquito Control"){
+    document.getElementById("price").innerHTML = "Price : 1500Rs ";
+    }
+    else if(service == "Ant Control"){
+    document.getElementById("price").innerHTML = "Price : 2500Rs ";
+    }
+    else if(service == "Sanitization"){
+    document.getElementById("price").innerHTML = "Price : 2500Rs ";
+    }
+  else{
+    document.getElementById("price").innerHTML= "Price : 2000Rs";
+  }
+}
+function submitData(){
+  // var paymentMethod = document.form.Payment.value;
+  // if(paymentMethod == "Online"){
+    
+  //     document.getElementById("submit").href="online.html";
+  // }
+
+}
+
+
+</script> 
+
+
+ 
+
+
+   </body>
+
+   </html>

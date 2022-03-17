@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Appointment for large scale </title>
+        <link rel="stylesheet" href="largeappointment.css">
+     <!-- <script src="appointment.js"></script>   -->
+     <script>
+      function handleappointment(e){
+          e.preventDefault()
+          fetch("127.0.0.1:3001/largeappointment",{
+              method:"post"
+          })
+          .then(function(res){
+              console.log(res)
+          })
+      }
+  </script>
+  </head>
+   <body>
+     <section>
+    <form class="appoint" name="form" id="appointment" action="http://localhost:3001/largeappointment" method="post" >
+      <fieldset>
+      <h1>APPOINTMENT SECTION</h1><br>
+        <label>
+        Name  of company: 
+        <input type="text" name="Companyname" required>
+      </label><br>
+      <label>
+        Email : 
+        <input type="email" name="email" required>
+      </label><br>
+      <label>
+        Phone : 
+        <input type="tel" name="phonenumber">
+      </label><br> 
+      <label> 
+       Address : 
+       <textarea  rows="3" cols="10"  name="address" placeholder="address" id="address"></textarea>
+      </label><br> 
+      <h3>Book Appointment For : </h3>
+     
+      <table>
+        <tr>
+          <td>Date : </td>
+          <td>Time :</td>
+        </tr>
+        <tr>
+          <td> <input type="date" name="date"  id="date" required></td>
+          <td><input type="time" name="time"  id="time" required></td>
+        </tr>
+      </table>
+      
+      
+      <label for="Pest services">Services : </label>
+      <select name="services" id="Pest services" onclick="price()">
+        <option value="select">Select</option>
+            <option value="Rodent">Rodent</option>
+            <option value="Sanitization">Sanitization</option>
+            <option value="cleaning">cleaning</option>
+            <option value="Sewage cleaning">Sewage cleaning</option>
+            <option value="insect Control">insect Control</option>
+            <option value="cockroach Control">cockroach Control</option>
+          </select><br>
+      
+    <p id="price"><b>Price : --</b></p>
+
+      <span>Payment method : </span>&nbsp;&nbsp;&nbsp;
+      <input type="radio" id="online" name="payment" value="Online">
+      <label for="Online Payment">Online </label>
+      <input type="radio" id="cash" name="payment" value="Cash">
+      <label for="Cash">Cash </label><br><br>
+
+      
+      <span>Confirm Request by : </span>
+    
+        <label>
+          <input type="radio" name="Confirmation requested by" value="Email" checked>
+          Email
+        </label>
+         <label>
+          <input type="radio" name="Confirmation requested by" value="Message">
+         Phone call
+        </label>
+        <br><br>
+    
+
+     <button onclick="submitData()"><a id="submit" href="#" onclick="submitData()">BOOK NOW</a></button>
+
+      
+    </fieldset>
+</form>
+</section>
+<script>
+
+document.getElementById("booknow-btn").addEventListener("click", (e)=>{
+  e.preventDefault()
+})
+
+function price(){
+  var service = document.getElementById("Pest services").value;
+  if(service=="select"){
+    document.getElementById("price").innerHTML = "Price : -- ";
+  }
+  else if(service == "Rodent"){
+    document.getElementById("price").innerHTML = "Price : 10000Rs ";
+  }
+  else if(service == "Sanitization"){
+    document.getElementById("price").innerHTML = "Price : 20000Rs ";
+  }
+  else if(service == "cleaning"){
+    document.getElementById("price").innerHTML = "Price : 30000Rs ";
+  }
+  else if(service == "Sewage cleaning"){
+    document.getElementById("price").innerHTML = "Price : 40000Rs ";
+  }
+  else if(service == "insect Control"){
+    document.getElementById("price").innerHTML = "Price : 50000Rs ";
+  }
+  else{
+    document.getElementById("price").innerHTML= "Price : 60000Rs";
+  }
+}
+
+function submitData(){
+  var paymentMethod = document.form.Payment.value;
+  if(paymentMethod == "Online"){
+    
+      document.getElementById("submit").href="online.html";
+  }
+}
+
+</script> 
+
+
+ 
+
+
+   </body>
+
+   </html>
